@@ -1,0 +1,12 @@
+/home/carioca/Digital Wellbing/CMakeFiles/timeout.dir
+/home/carioca/Digital Wellbing/CMakeFiles/edit_cache.dir
+/home/carioca/Digital Wellbing/CMakeFiles/rebuild_cache.dir
+/home/carioca/Digital Wellbing/csv-parser/CMakeFiles/edit_cache.dir
+/home/carioca/Digital Wellbing/csv-parser/CMakeFiles/rebuild_cache.dir
+/home/carioca/Digital Wellbing/csv-parser/include/internal/CMakeFiles/csv.dir
+/home/carioca/Digital Wellbing/csv-parser/include/internal/CMakeFiles/edit_cache.dir
+/home/carioca/Digital Wellbing/csv-parser/include/internal/CMakeFiles/rebuild_cache.dir
+/home/carioca/Digital Wellbing/csv-parser/programs/CMakeFiles/csv_info.dir
+/home/carioca/Digital Wellbing/csv-parser/programs/CMakeFiles/csv_stats.dir
+/home/carioca/Digital Wellbing/csv-parser/programs/CMakeFiles/edit_cache.dir
+/home/carioca/Digital Wellbing/csv-parser/programs/CMakeFiles/rebuild_cache.dir

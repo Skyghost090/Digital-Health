@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wno-unknown-pragmas -Wl,--dependency-file=CMakeFiles/csv_info.dir/link.d CMakeFiles/csv_info.dir/csv_info.cpp.o -o csv_info  ../include/internal/libcsv.a
