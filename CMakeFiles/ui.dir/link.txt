@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/ui.dir/link.d CMakeFiles/ui.dir/ui_autogen/mocs_compilation.cpp.o CMakeFiles/ui.dir/ui.cpp.o -o ui  /usr/lib/libQt6Widgets.so.6.8.1 /usr/lib/libQt6Gui.so.6.8.1 /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libQt6Core.so.6.8.1
