@@ -35,7 +35,7 @@ cd Digital-Health
 pip install pyqt5
 
 # Run the application
-python3 main.py
+(./service.sh)& python3 main.py
 ```
 
 ## Usage
