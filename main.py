@@ -27,14 +27,11 @@ class MainWindow(QMainWindow):
         removeAction.triggered.connect(self.removeTrigered)
         githubAction = QAction("Github", self)
         githubAction.triggered.connect(lambda: os.system("xdg-open 'https://github.com/Skyghost090'"))
-        versionAction = QAction("Version", self)
-        versionAction.triggered.connect(self.versionTrigered)
         appsMenu = QMenu("&Apps timer", self)
         appsMenu.addAction(addAction_)
         appsMenu.addAction(removeAction)
         menuBar.addMenu(appsMenu)
         aboutMenu = menuBar.addMenu("&About")
-        aboutMenu.addAction(versionAction)
         aboutMenu.addAction(githubAction)
         self.show()
 
@@ -46,7 +43,6 @@ class MainWindow(QMainWindow):
         appName.setGeometry(0,0,300,40)
         appName.setStyleSheet("font-size: 17px; background-color: transparent")
 
-        time = None
         datetime = QTimeEdit(dlg)
         datetime.setGeometry(0,40,300,50)
         datetime.setDisplayFormat("HH:mm")
@@ -59,23 +55,13 @@ class MainWindow(QMainWindow):
             sed =  '"1 s/.*/&,{}/"'.format(appName.text())
             sed2 =  '"2 s/.*/&,{}/"'.format(datetime.text())
             sedfirst =  '"1 s/.*/&{}/"'.format(appName.text())
-            sed2first =  '"2 s/.*/&{}/"'.format(time)
-            os.system("sed -i {} apps.txt".format(sed))
-            os.system("if [ $(cat apps.txt | grep -o ' ' | wc -l) == '0' ]; then sed -i {} timeout.csv && sed -i {} timeout.csv; else sed -i {} timeout.csv && sed -i {} timeout.csv; fi".format(sedfirst, sed2first, sed, sed2))
+            sedapps =  '"1 s/.*/&{} /"'.format(appName.text())
+            sed2first =  '"2 s/.*/&{}/"'.format(datetime.text())
+            os.system('if [ $(cat apps.txt | grep -o " " | wc -l) == "0" ]; then sed -i {} timeout.csv && echo "" >> timeout.csv && echo "" >> timeout.csv && sed -i {} timeout.csv; else sed -i {} timeout.csv && sed -i {} timeout.csv; fi'.format(sedfirst, sed2first, sed, sed2))
+            os.system("sed -i {} apps.txt".format(sedapps))
             dlg.close()
 
         btn.clicked.connect(click)
-        dlg.setWindowModality(Qt.ApplicationModal)
-        dlg.exec_()
-
-    def versionTrigered(self):
-        dlg = QDialog()
-        dlg.setWindowTitle("Version")
-        versionLabel = QLabel("Version 1\nGithub: Skyghost090\n\nMotivation text hffhlfchlidsf", dlg)
-        versionLabel.setGeometry(0,0,400,300)
-        versionLabel.setStyleSheet("font-size: 20px")
-        versionLabel.setAlignment(Qt.AlignCenter)
-        dlg.setFixedSize(400,300)
         dlg.setWindowModality(Qt.ApplicationModal)
         dlg.exec_()
 
@@ -91,7 +77,7 @@ class MainWindow(QMainWindow):
         btn.setFlat(True)
 
         def click():
-            substring = '$(cat apps.txt | tr {} " ")'.format(appName.text())
+            substring = '$(cat apps.txt | sed -i "s/{}/ /g")'.format(appName.text())
             os.system('echo "{} " > apps.txt'.format(substring))
             os.system('./remove.sh {}'.format(appName.text()))
             dlg.close()
