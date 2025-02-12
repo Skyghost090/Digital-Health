@@ -30,11 +30,11 @@ Ensure your system has the following dependencies installed:
 # Clone the repository
 git clone https://github.com/Skyghost090/Digital-Health.git
 cd Digital-Health
-
+./installservice.sh
 # Install required dependencies
 pip install pyqt5
 
-# Run the application
+# Run the application after build
 (./service.sh)& python3 main.py
 ```
 
