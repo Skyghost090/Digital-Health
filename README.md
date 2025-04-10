@@ -1,61 +1,97 @@
-# Digital Health
+# 🧘‍♂️ Digital Health – Screen Time Manager for Linux
 
 ![Contributors](https://img.shields.io/github/contributors/skyghost090/Digital-Health?style=plastic)
 ![Forks](https://img.shields.io/github/forks/skyghost090/Digital-Health)
 ![Stars](https://img.shields.io/github/stars/skyghost090/Digital-Health)
-![Licence](https://img.shields.io/github/license/skyghost090/Digital-Health)
+![License](https://img.shields.io/github/license/skyghost090/Digital-Health)
 ![Issues](https://img.shields.io/github/issues/skyghost090/Digital-Health)
 
-Digital Health is a digital wellness application designed to help users manage their screen time on Linux. It allows users to set limits on application usage, promoting healthier digital habits and improving productivity.
+---
 
-## Features
+## 📖 Overview
 
-- Set daily or session-based usage limits for specific applications.
-- Receive notifications when approaching time limits.
-- Automatically block applications after the time limit is reached.
-- User-friendly interface for managing app restrictions.
-- Customizable settings to fit individual needs.
-- Lightweight and optimized for Linux environments.
+**Digital Health** is a digital wellness tool designed for **Linux users** who want to build healthier screen habits and reduce digital distractions.
 
-## Installation
+With **time-based app restrictions**, real-time monitoring, and automatic blocking, you can take back control of your focus and productivity — all through a clean and minimal interface.
 
-### Dependencies
-Ensure your system has the following dependencies installed:
-- Python 3.x
-- PyQt5
-- CMake
+---
 
-### Install via Git
-```sh
+## ✨ Features
+
+- ⏳ Set **daily or session-based limits** for specific apps
+- 🚫 Automatically **block applications** once limits are reached  
+- 🧩 Clean and **user-friendly interface** for easy setup  
+- ⚙️ Fully **customizable** to fit your personal workflow  
+- 🐧 Lightweight and optimized for **Linux environments**
+
+---
+
+## 🧪 Installation
+
+### ✅ Dependencies
+
+Make sure your system includes the following:
+
+- 🐍 Python 3.x  
+- 📦 PyQt5  
+- 🛠️ CMake
+
+### 🚀 Install via Git
+
+```bash
 # Clone the repository
-git clone https://github.com/Skyghost090/Digital-Health.git
+git clone https://github.com/skyghost090/Digital-Health.git
 cd Digital-Health
+
+# Run installer script
 ./installservice.sh
+
 # Install required dependencies
 pip install pyqt5
 
-# Run the application after build
+# Launch the app
 python3 main.py
 ```
 
-## Usage
+---
 
-1. Launch **Digital Health**.
-2. Select the applications you want to restrict.
-3. Set the time limits for each app.
-4. Monitor your usage and receive alerts when approaching your limits.
-5. Once the time limit is reached, the application will be blocked.
+## 🧭 How to Use
 
-## Building
-```sh
-cmake .; make
+1. 🚀 Launch **Digital Health**
+2. 🗂️ Select the apps you want to restrict
+3. ⏱️ Set time limits for each application
+4. 📊 Monitor usage in real-time
+5. 🔐 Once time’s up, the app is automatically blocked
+
+Stay productive, stay mindful 🧠
+
+---
+
+## 🛠️ Building from Source
+
+```bash
+cmake . && make
 ```
 
-## Contributing
+---
 
-We welcome contributions! Feel free to submit pull requests or report issues on our [GitHub repository](https://github.com/Skyghost090/Digital-Health.git).
+## 🤝 Contributing
 
-## License
+We welcome all kinds of contributions! Whether it's bug fixes, new features, or UI improvements — your input helps make **Digital Health** better for everyone 💙
 
-This project is licensed under the BSD License. See the `LICENSE` file for more details.
+### 👣 To contribute:
 
+1. 🍴 Fork the repo  
+2. 🌱 Create a feature branch  
+3. ✅ Commit your changes  
+4. 🚀 Push to your fork  
+5. 📬 Submit a pull request
+
+Let’s build something great together!
+
+---
+
+## 📄 License
+
+This project is licensed under the **BSD License**.  
+See the [LICENSE](LICENSE) file for full details.
